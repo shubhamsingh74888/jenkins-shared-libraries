@@ -12,7 +12,7 @@ echo "Deploying on Main Instance (Master)..."
                     
                     // 3. FORCE CLEANUP: This is the critical fix for the 'Conflict' error.
                     // It kills any container named mysql or flask-app regardless of who started it.
-                   sh "docker rm -f mysql flask-app || true"
+                 //  sh "docker rm -f mysql flask-app || true"
                     
                     // 4. Standard Compose Cleanup
                     sh "docker-compose -p ${project} down --remove-orphans || true"
